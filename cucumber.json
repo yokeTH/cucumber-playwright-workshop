@@ -10,11 +10,8 @@
       "snippetInterface": "async-await"
     },
     "parallel": 1,
-    "paths": ["src/tests/features/**/*.feature"],
-    "require": [
-      "src/tests/step_definitions/**/*.ts",
-      "src/tests/utils/**/*.ts"
-    ],
+    "paths": ["src/features/**/*.feature"],
+    "require": ["src/step_definitions/**/*.ts", "src/utils/**/*.ts"],
     "requireModule": ["ts-node/register"]
   }
 }

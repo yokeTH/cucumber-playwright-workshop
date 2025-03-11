@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cucumber-ts": "cucumber-js test",
+    "tags": "cucumber-js test --tags @smoke"
   },
   "repository": {
     "type": "git",
