@@ -9,8 +9,10 @@ Feature: Login Feature
         And I clicks on the home page login button
         Then I should navigate to "/inventory.html"
 
+    @login
     Scenario: Login with locked out user
         Given I visit the home page
-        When I input username "standard_user" and password "secret_sauce"
+        When I input username "locked_out_user" and password "secret_sauce"
         And I clicks on the home page login button
-        Then I should see an error message on the login button and should not navigate to the "/inventory.html"
+        Then I should see an error message containing "Sorry, this user has been locked out." on the login button
+        And I should not navigate to "/inventory.html"
