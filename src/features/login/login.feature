@@ -1,3 +1,4 @@
+@login
 Feature: Login Feature
     As a user
     I want to be able to Login
@@ -9,7 +10,6 @@ Feature: Login Feature
         And I clicks on the home page login button
         Then I should navigate to "/inventory.html"
 
-    @login
     Scenario: Login with locked out user
         Given I visit the home page
         When I input username "locked_out_user" and password "secret_sauce"
