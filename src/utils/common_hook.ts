@@ -62,7 +62,7 @@ Before(async function (this: ICustomWorld) {
 
   // Set Playwright global navigation timeout. e.g. goto, reload, waitForNavigation
   this.page.setDefaultNavigationTimeout(
-    config.playwrightNavigationTimeoutMilliseconds,
+    config.playwrightNavigationTimeoutMilliseconds
   );
 
   // Set Playwright global command timeout. e.g. click, type, waitForSelector
@@ -75,7 +75,7 @@ After(async function (this: ICustomWorld, { pickle, result }) {
     let nanoSeconds = result.duration.nanos;
     let milliseconds = nanoSeconds / Math.pow(10, 6);
     this.attach(
-      `Status: ${result.status}. Duration: ${milliseconds} milliseconds`,
+      `Status: ${result.status}. Duration: ${milliseconds} milliseconds`
     );
   }
   console.log("Finished scenario: ", pickle.name);

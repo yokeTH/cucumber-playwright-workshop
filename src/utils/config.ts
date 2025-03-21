@@ -6,7 +6,7 @@ const dotenvParseOutput: DotenvParseOutput | undefined = loadEnv({
 }).parsed;
 
 let slowMo: number = parseInt(
-  dotenvParseOutput?.SLOW_MOTION_MILLISECONDS || "50",
+  dotenvParseOutput?.SLOW_MOTION_MILLISECONDS || "50"
 );
 const browserOptions: LaunchOptions = {
   headless: dotenvParseOutput?.HEADLESS === "true",
@@ -19,13 +19,13 @@ export const config = {
   browserWidth: parseInt(dotenvParseOutput?.BROWSER_WIDTH || "1280"),
   browserHeight: parseInt(dotenvParseOutput?.BROWSER_HEIGHT || "720"),
   cucumberTimeoutMilliseconds: parseInt(
-    dotenvParseOutput?.CUCUMBER_TIMEOUT_MS || "10000",
+    dotenvParseOutput?.CUCUMBER_TIMEOUT_MS || "10000"
   ),
   playwrightNavigationTimeoutMilliseconds: parseInt(
-    dotenvParseOutput?.PLAYWRIGHT_NAVIGATION_TIMEOUT_MS || "7000",
+    dotenvParseOutput?.PLAYWRIGHT_NAVIGATION_TIMEOUT_MS || "7000"
   ),
   playwrightCommandTimeoutMilliseconds: parseInt(
-    dotenvParseOutput?.PLAYWRIGHT_COMMAND_TIMEOUT_MS || "5000",
+    dotenvParseOutput?.PLAYWRIGHT_COMMAND_TIMEOUT_MS || "5000"
   ),
   BASE_URL: dotenvParseOutput?.BASE_URL,
 };
