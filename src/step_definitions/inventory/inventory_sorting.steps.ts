@@ -8,7 +8,7 @@ When(
   "I select the {string} with value {string} sorting option",
   async (optionLabel: string, optionValue: string) => {
     const dropdownElement = customWorld.page?.locator(
-      'select[data-test="product-sort-container"]'
+      'select[data-test="product-sort-container"]',
     );
 
     expect(dropdownElement).not.toBeNull();
@@ -18,14 +18,14 @@ When(
         value: optionValue,
       });
     }
-  }
+  },
 );
 
 Then(
   "the inventory items should be sorted in the correct order corresponding to {string}",
   async function (optionValue: string) {
     const inventoryItems = customWorld?.page?.locator(
-      'div[class="inventory_item"]'
+      'div[class="inventory_item"]',
     );
     expect(inventoryItems).not.toBeNull();
 
@@ -44,14 +44,14 @@ Then(
         ?.locator(itemPriceAttribute)
         .innerText();
       const currentItemPriceDouble = parseFloat(
-        currentItemPriceString?.replaceAll("$", "") || ""
+        currentItemPriceString?.replaceAll("$", "") || "",
       );
 
       const nextItemPriceString = await nextItem
         ?.locator(itemPriceAttribute)
         .innerText();
       const nextItemPriceDouble = parseFloat(
-        nextItemPriceString?.replaceAll("$", "") || ""
+        nextItemPriceString?.replaceAll("$", "") || "",
       );
 
       expect(currentItemPriceDouble).not.toBeNaN();
@@ -59,9 +59,9 @@ Then(
 
       if (optionValue === "hilo") {
         expect(currentItemPriceDouble).toBeGreaterThanOrEqual(
-          nextItemPriceDouble
+          nextItemPriceDouble,
         );
       }
     }
-  }
+  },
 );
