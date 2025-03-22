@@ -28,7 +28,7 @@ When(
       const passwordInputField = page.locator('input[name="password"]');
       await passwordInputField?.fill(password);
     }
-  }
+  },
 );
 
 When("I clicks on the home page login button", async () => {
@@ -59,7 +59,7 @@ Then(
       });
       expect(errorElement).toBeVisible();
     }
-  }
+  },
 );
 
 Then("I should not navigate to {string}", async (path: string) => {

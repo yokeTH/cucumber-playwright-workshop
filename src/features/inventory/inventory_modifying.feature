@@ -1,4 +1,4 @@
-@inventory
+@inventory @inventory_modify
 Feature: Inventory Management
     As a user
     I want to be able to add and remove items from the cart

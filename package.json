@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "cucumber-ts": "cucumber-js test",
-    "tags": "cucumber-js test --tags @login"
+    "tags": "cucumber-js test --tags @login",
+    "inv:mod": "cucumber-js test --tags @inventory_modify"
   },
   "repository": {
     "type": "git",
