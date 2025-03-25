@@ -16,4 +16,4 @@ Feature: Inventory Management
         Examples:
             | number_of_added_items | remove_count | total_count |
             | 4                     | 3            | 1           |
-            # | 4                     | 2            | 2           |
+            | 4                     | 2            | 2           |
